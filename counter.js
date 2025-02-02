@@ -2,6 +2,11 @@ let count = 0; //initial count
 
 const value = document.querySelector("#value");
 const btns = document.querySelectorAll(".btn");
+const darkMode = document.getElementById('toggle-mode');
+
+darkMode.addEventListener('click', function(toggleMode){
+    document.body.classList.toggle('dark-mode');
+});
 
 btns.forEach(function(btn) {
     btn.addEventListener('click', function(e) {
@@ -25,4 +30,6 @@ btns.forEach(function(btn) {
         value.textContent = count; 
     });
 });
+
+
 
